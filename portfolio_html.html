@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./assets/cat.svg" type="image/svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bo Pan - Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <aside class="left">
+        <div class="avatar">
+          <img src="./assets/me.png" alt="Bo Pan" id="avatarImg">
+        </div>
+        <h1>Bo Pan</h1>
+        <div class="sub">Cybersecurity enthusiast · Aspiring SOC Analyst</div>
+
+        <div class="term" id="typingTerminal"></div>
+
+        <div class="skills" aria-label="skills">
+          <div class="chip">SOC Level1</div>
+          <div class="chip">Python</div>
+          <div class="chip">Wireshark</div>
+          <div class="chip">SIEM tools</div>
+        </div>
+
+        <div class="socials" aria-label="social links">
+          <a href="https://github.com/BoPann" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bopann/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/hardcoding0" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <button class="btn" onclick="copyEmail()">Copy email</button>
+          <button class="btn" onclick="downloadResume()">Download CV</button>
+        </div>
+      </aside>
+
+      <main class="right">
+        <div class="header-row">
+          <div class="neo">Projects</div>
+          <div class="tagline">Projects inspired by SOC, network forensics & tooling</div>
+        </div>
+
+        <div class="grid" id="projects">
+          <article class="proj">
+            <a href="testing.html">
+              <h3>Project 1</h3>
+              <p>Placeholder description for project 1</p>
+              <div class="tagline">Tech: Placeholder</div>
+            </a>
+          </article>
+
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 1</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 2</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 3</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 4</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 5</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+          <article class="proj">
+            <h3>Placeholder</h3>
+            <p>Placeholder description for project 6</p>
+            <div class="tagline">Tech: Placeholder</div>
+          </article>
+        </div>
+
+        <div class="reading-section">
+          <h2>Reading Review</h2>
+          <ul class="reading-list">
+            <li>Book / Article 1 – Short comment or key takeaway</li>
+            <li>Book / Article 2 – Short comment or key takeaway</li>
+            <li>Book / Article 3 – Short comment or key takeaway</li>
+          </ul>
+        </div>
+
+        <div class="terminal" role="status" aria-live="polite">
+          &gt; last build: <span id="buildTime">—</span>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

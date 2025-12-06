@@ -1,0 +1,397 @@
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+  --bg: #05060a;
+  --panel: #0b1220;
+  --accent: #00ff7f;
+  --muted: #8a939b;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glow: 0 6px 24px rgba(0, 255, 127, 0.06);
+  --mono: 'SFMono-Regular', ui-monospace, 'Roboto Mono', 'Courier New', monospace;
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: #cfe9d6;
+  background: linear-gradient(180deg, var(--bg), #071018);
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ============================================
+   LAYOUT CONTAINERS
+   ============================================ */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.card {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  border-radius: 14px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 22px;
+  box-shadow: var(--glow);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 255, 127, 0.06);
+}
+
+/* ============================================
+   LEFT SIDEBAR
+   ============================================ */
+.left {
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(0, 255, 127, 0.02), transparent);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Avatar */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px #00ff7f66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background: var(--panel);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 30px #00ff7faa;
+}
+
+/* Subtitle */
+.sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ============================================
+   TERMINAL / TYPING EFFECT
+   ============================================ */
+.term {
+  margin-top: 14px;
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  line-height: 1.4;
+  min-height: 140px;
+}
+
+.cursor {
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+.terminal {
+  margin-top: 16px;
+  background: #020408;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 127, 0.03);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  background: var(--glass);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* ============================================
+   SOCIAL LINKS
+   ============================================ */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.socials a {
+  color: #cfe9d6;
+  font-size: 26px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.socials a:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   BUTTONS & CONTROLS
+   ============================================ */
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--mono);
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 127, 0.05);
+}
+
+/* ============================================
+   RIGHT MAIN CONTENT
+   ============================================ */
+.right {
+  padding: 6px 2px 2px 2px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.neo {
+  background: linear-gradient(90deg, #00ff7f22, #00a88f11);
+  padding: 6px;
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+.tagline {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ============================================
+   PROJECTS GRID
+   ============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.proj {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  min-height: 120px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.18s ease;
+}
+
+.proj h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.proj p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.proj:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* ============================================
+   READING SECTION
+   ============================================ */
+.reading-section {
+  margin-top: 20px;
+}
+
+.reading-section h2 {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.reading-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reading-list li {
+  background: var(--panel);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  border: 1px solid rgba(0, 255, 127, 0.05);
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .left {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto 12px;
+  }
+
+  .term {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .neo {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .left {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .term {
+    font-size: 11px;
+    padding: 10px;
+  }
+
+  .proj {
+    min-height: 100px;
+  }
+}
+
+.proj a {
+  color: #00FF00;          /* Classic terminal green */
+  text-decoration: none;    /* Optional: remove underline */
+  font-family: monospace;   /* Optional: gives terminal feel */
+}
+
+.proj a:hover {
+  color: #39FF14;           /* Slightly brighter on hover */
+}
+
