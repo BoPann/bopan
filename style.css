@@ -118,7 +118,7 @@ h1 {
   margin-left: 2px;
 }
 
-.terminal {
+.last-build {
   margin-top: 16px;
   background: #020408;
   padding: 12px;
@@ -233,10 +233,10 @@ h1 {
   min-height: 120px;
   position: relative;
   overflow: hidden;
-  transition: all 0.18s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.proj h3 {
+.proj h3, .reading-section h2{
   margin: 0 0 6px 0;
   font-size: 15px;
 }
@@ -249,39 +249,71 @@ h1 {
 
 .proj:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 255, 127, 0.2);
   cursor: pointer;
+}
+
+.proj a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.proj a:hover {
+  color: var(--accent);
 }
 
 /* ============================================
    READING SECTION
    ============================================ */
-.reading-section {
+.me-section {
   margin-top: 20px;
 }
 
-.reading-section h2 {
+.me-section h2 {
   color: var(--accent);
   font-family: var(--mono);
   font-size: 16px;
   margin-bottom: 8px;
 }
 
-.reading-list {
+.me-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.reading-list li {
+.me-list li {
   background: var(--panel);
   padding: 8px 12px;
   border-radius: 6px;
+  margin-top: 10px;
   margin-bottom: 6px;
   border: 1px solid rgba(0, 255, 127, 0.05);
   font-size: 13px;
-  color: var(--muted);
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.me-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 255, 127, 0.15);
+}
+
+.me-list li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--mono);
+  display: block;
+}
+
+.me-list li a:hover {
+  color: #39FF14;
+}
+
+.me-list li a::before {
+  content: "> ";
+  margin-right: 4px;
 }
 
 /* ============================================
@@ -294,6 +326,26 @@ h1 {
   25%, 75% {
     opacity: 0;
   }
+}
+
+/* ============================================
+   FOOTER NOTE
+   ============================================ */
+.construction-note {
+  margin-top: 24px;
+  padding: 12px;
+  background: var(--panel);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 127, 0.05);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.construction-note::before {
+  content: "⚠️ ";
+  margin-right: 6px;
 }
 
 /* ============================================
@@ -383,15 +435,5 @@ h1 {
   .proj {
     min-height: 100px;
   }
-}
-
-.proj a {
-  color: #00FF00;          /* Classic terminal green */
-  text-decoration: none;    /* Optional: remove underline */
-  font-family: monospace;   /* Optional: gives terminal feel */
-}
-
-.proj a:hover {
-  color: #39FF14;           /* Slightly brighter on hover */
 }
 
