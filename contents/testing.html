@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="/assets/cat.svg" type="image/svg">
+  <link rel="stylesheet" href="/template.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+  <div class="content"></div>
+  <script>
+    // fetch github raw markdown file
+    fetch("https://raw.githubusercontent.com/BoPann/advent-of-cyber-2025/main/day2-phishing.md")
+      .then(res => res.text())
+      .then(md => {
+        document.querySelector(".content").innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        console.error("Error loading markdown:", err);
+        document.querySelector(".content").innerHTML = "<p>Failed to load content</p>";
+      });
+  </script>
+</body>
+</html>
