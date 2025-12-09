@@ -1,4 +1,4 @@
-### 👋 Welcome to my page!
+# 👋 Welcome to my page!
 
 Hey there! My name’s **Bo**, and I’m currently a **Computer Science graduate student at Seattle University**. My passion lies in **cybersecurity**. I’m working toward becoming a **SOC Analyst**. 
 
@@ -16,3 +16,7 @@ In my free time, I like tackling **CTF challenges** — I see them as fun puzzle
 Outside of tech, I love **shooting hoops**, **working out**, **hiking**, and **reading** about topics like health, mindfulness, and fiction. I’m also a huge fan of _The Office_ — I watch clips on YouTube all the time, and who knows, maybe I’ll join an Office trivia night someday! 😄
 
 > “I’m not superstitious, but I am a little stitious.” — _Michael Scott_
+
+
+Here is me and the one and only Prof. David J. Malan from CS50, who has been the inpiration in my learning journey.
+![me](/mds/imgs/me.png)

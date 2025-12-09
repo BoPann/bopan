@@ -57,5 +57,5 @@ function copyEmail() {
 
 // Download resume function
 function downloadResume() {
-  window.open('Bo_Pan_Resume.pdf', '_blank');
+  window.open('/assets/Bo_Pan_Resume.pdf', '_blank');
 }

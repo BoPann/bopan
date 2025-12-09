@@ -9,6 +9,11 @@
   --glass: rgba(255, 255, 255, 0.03);
   --glow: 0 6px 24px rgba(0, 255, 127, 0.06);
   --mono: 'SFMono-Regular', ui-monospace, 'Roboto Mono', 'Courier New', monospace;
+  
+  /* Responsive font sizes */
+  --text-base: 16px;
+  --text-sm: 15px;
+  --text-xs: 14px;
 }
 
 /* ============================================
@@ -25,11 +30,12 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color: #cfe9d6;
   background: linear-gradient(180deg, var(--bg), #071018);
+  font-size: var(--text-base);
 }
 
 h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 /* ============================================
@@ -94,7 +100,7 @@ h1 {
 /* Subtitle */
 .sub {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-sm);
   margin-top: 6px;
 }
 
@@ -104,12 +110,12 @@ h1 {
 .term {
   margin-top: 14px;
   background: var(--panel);
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--accent);
-  line-height: 1.4;
+  line-height: 1.5;
   min-height: 140px;
 }
 
@@ -121,11 +127,11 @@ h1 {
 .last-build {
   margin-top: 16px;
   background: #020408;
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
   border: 1px solid rgba(0, 255, 127, 0.03);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--accent);
 }
 
@@ -141,9 +147,9 @@ h1 {
 
 .chip {
   background: var(--glass);
-  padding: 6px 8px;
+  padding: 8px 12px;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
@@ -159,8 +165,9 @@ h1 {
 
 .socials a {
   color: #cfe9d6;
-  font-size: 26px;
+  font-size: 32px;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 8px;
 }
 
 .socials a:hover {
@@ -174,13 +181,15 @@ h1 {
 .btn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 8px 12px;
+  padding: 12px 16px;
   border-radius: 8px;
   color: var(--accent);
   cursor: pointer;
   font-family: var(--mono);
+  font-size: var(--text-sm);
   margin-right: 8px;
   margin-top: 8px;
+  min-height: 44px;
 }
 
 .btn:hover {
@@ -203,15 +212,16 @@ h1 {
 
 .neo {
   background: linear-gradient(90deg, #00ff7f22, #00a88f11);
-  padding: 6px;
+  padding: 8px 10px;
   border-radius: 6px;
   color: var(--accent);
   font-family: var(--mono);
+  font-size: var(--text-sm);
 }
 
 .tagline {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--muted);
 }
 
@@ -227,7 +237,7 @@ h1 {
 
 .proj {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
-  padding: 12px;
+  padding: 16px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.02);
   min-height: 120px;
@@ -236,15 +246,16 @@ h1 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.proj h3, .reading-section h2{
-  margin: 0 0 6px 0;
-  font-size: 15px;
+.proj h3, .reading-section h2 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
 }
 
 .proj p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-sm);
+  line-height: 1.5;
 }
 
 .proj:hover {
@@ -273,7 +284,7 @@ h1 {
 .me-section h2 {
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
@@ -285,12 +296,12 @@ h1 {
 
 .me-list li {
   background: var(--panel);
-  padding: 8px 12px;
+  padding: 12px 16px;
   border-radius: 6px;
   margin-top: 10px;
   margin-bottom: 6px;
   border: 1px solid rgba(0, 255, 127, 0.05);
-  font-size: 13px;
+  font-size: var(--text-sm);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -333,12 +344,12 @@ h1 {
    ============================================ */
 .construction-note {
   margin-top: 24px;
-  padding: 12px;
+  padding: 14px;
   background: var(--panel);
   border-radius: 8px;
   border: 1px solid rgba(0, 255, 127, 0.05);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--muted);
   text-align: center;
 }
@@ -349,31 +360,43 @@ h1 {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - MOBILE FIRST!
    ============================================ */
 @media (max-width: 768px) {
+  :root {
+    --text-base: 17px;
+    --text-sm: 16px;
+    --text-xs: 15px;
+  }
+
   .wrap {
-    padding: 16px;
+    padding: 20px;
   }
 
   .card {
     grid-template-columns: 1fr;
-    padding: 16px;
-    gap: 16px;
+    padding: 24px;
+    gap: 24px;
   }
 
   .left {
-    padding: 16px;
+    padding: 24px;
     text-align: center;
   }
 
   .avatar {
-    margin: 0 auto 12px;
+    margin: 0 auto 16px;
+    width: 130px;
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 26px;
   }
 
   .term {
     text-align: left;
-    font-size: 12px;
+    padding: 16px;
   }
 
   .skills {
@@ -382,58 +405,64 @@ h1 {
 
   .socials {
     justify-content: center;
+    gap: 16px;
+  }
+
+  .socials a {
+    font-size: 36px;
   }
 
   .header-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
   }
 
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 18px;
-  }
-
-  .neo {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .wrap {
-    padding: 12px;
-  }
-
-  .card {
-    padding: 12px;
-  }
-
-  .left {
-    padding: 12px;
-  }
-
-  .avatar {
-    width: 100px;
-    height: 100px;
+    gap: 16px;
   }
 
   .btn {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 8px;
-  }
-
-  .term {
-    font-size: 11px;
-    padding: 10px;
+    margin-bottom: 12px;
+    padding: 16px;
+    font-size: 16px;
   }
 
   .proj {
-    min-height: 100px;
+    padding: 20px;
+  }
+
+  .proj h3 {
+    font-size: 19px;
+  }
+
+  .me-section h2 {
+    font-size: 20px;
+  }
+
+  .me-list li {
+    padding: 16px 20px;
   }
 }
 
+@media (max-width: 360px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
