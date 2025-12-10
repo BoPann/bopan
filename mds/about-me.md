@@ -18,5 +18,5 @@ Outside of tech, I love **shooting hoops**, **working out**, **hiking**, and **r
 > “I’m not superstitious, but I am a little stitious.” — _Michael Scott_
 
 
-Here is me and the one and only Prof. David J. Malan from CS50, who has been the inpiration in my learning journey.
+Here is me and the one and only Prof. David J. Malan from Harvard CS50, who has been the inpiration in my learning journey.
 ![me](/mds/imgs/me.png)
