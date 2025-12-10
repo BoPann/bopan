@@ -274,6 +274,15 @@ h1 {
   color: var(--accent);
 }
 
+a.proj {
+  display: block;            /* makes it act like a card */
+  color: inherit;            /* same text color */
+  text-decoration: none;     /* remove underline */
+}
+a.proj:hover {
+  color: inherit;  /* prevents title from turning accent unless you want that */
+}
+
 /* ============================================
    READING SECTION
    ============================================ */
